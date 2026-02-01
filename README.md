@@ -64,7 +64,7 @@ The workflow is triggered by a chat message and routes the input through an AI A
 6. Start chatting 🚀
 
 ---
-<img width="1470" height="842" alt="Screenshot 2026-02-01 at 8 24 22 PM" src="https://github.com/user-attachments/assets/1c430538-20e6-4c76-a1e1-0fa9e0fe7316" />
+<img width="1470" height="838" alt="Screenshot 2026-02-01 at 8 31 53 PM" src="https://github.com/user-attachments/assets/5fb8f119-cfe4-48fa-b6c1-72b3af9b84fd" />
 
 
 ## ⚠️ Credentials Notice
