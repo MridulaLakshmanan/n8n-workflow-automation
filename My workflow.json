@@ -1,0 +1,166 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "initialMessages": "Hi there! 👋\nMy name is Mrii. How can I assist you today?",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -304,
+        -64
+      ],
+      "id": "0508a281-0b90-459d-8a7a-34badca01276",
+      "name": "When chat message received",
+      "webhookId": "e18dd763-84f1-4db1-9f16-4e46b0916ddc"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -64,
+        -80
+      ],
+      "id": "76231993-bb7b-45ed-b031-c54d47dc5c85",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -16,
+        160
+      ],
+      "id": "35f570dd-b39c-47b6-ab7d-aabb07c9d2ff",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        272,
+        112
+      ],
+      "id": "ebf1d10c-a4a7-4964-8ddc-a7983f45933b",
+      "name": "Calculator"
+    },
+    {
+      "parameters": {
+        "model": "llama-3.1-8b-instant",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        -208,
+        128
+      ],
+      "id": "c64e8d8b-bea1-46a4-bb11-1cfe2e65d201",
+      "name": "Groq Chat Model",
+      "credentials": {
+        "groqApi": {
+          "id": "c0WlfV8mgske5YLL",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "cityName": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('City', ``, 'string') }}",
+        "language": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Language', ``, 'string') }}"
+      },
+      "type": "n8n-nodes-base.openWeatherMapTool",
+      "typeVersion": 1,
+      "position": [
+        144,
+        144
+      ],
+      "id": "2a76c57c-9b56-4858-b542-5d2b5c4c3cf8",
+      "name": "OpenWeatherMap",
+      "credentials": {
+        "openWeatherMapApi": {
+          "id": "hbFaRf9Mt5YL29v6",
+          "name": "OpenWeatherMap account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenWeatherMap": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "9c69e84f-3fef-45de-9e9b-d6add38d0bad",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "c67b0e5ad0370c69345751cd0c2d75af9e40805e2be8eac706d3d12b4f5d5770"
+  },
+  "id": "6Iyu7YVRBCxP9E9iN0HN_",
+  "tags": []
+}
