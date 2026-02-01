@@ -31,6 +31,7 @@ The workflow is triggered by a chat message and routes the input through an AI A
 - **Calculator Tool** – Performs mathematical computations
 
 ---
+<img width="1470" height="842" alt="Screenshot 2026-02-01 at 8 24 22 PM" src="https://github.com/user-attachments/assets/c181b373-2c50-49fc-8f95-555831e873c3" />
 
 ## 🔧 Tools & Technologies
 - **n8n** – Workflow automation platform
@@ -63,6 +64,8 @@ The workflow is triggered by a chat message and routes the input through an AI A
 6. Start chatting 🚀
 
 ---
+<img width="1470" height="842" alt="Screenshot 2026-02-01 at 8 24 22 PM" src="https://github.com/user-attachments/assets/1c430538-20e6-4c76-a1e1-0fa9e0fe7316" />
+
 
 ## ⚠️ Credentials Notice
 ⚠️ **Credentials are not included.**  
@@ -74,4 +77,4 @@ You will need to set up:
 
 ---
 
-## 📁 Repository Structure
+
